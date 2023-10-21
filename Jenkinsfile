@@ -10,6 +10,12 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        sh 'run scripts/build.sh'
+      }
+    }
+
   }
   environment {
     registry = 'dbarkov/ci-cd-pipeline-task'
