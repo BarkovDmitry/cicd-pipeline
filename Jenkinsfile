@@ -13,6 +13,7 @@ pipeline {
     stage('Build') {
       steps {
         dir ('scripts') {
+          sh('chmod +x build.sh')
           sh('./build.sh')
         }
       }
