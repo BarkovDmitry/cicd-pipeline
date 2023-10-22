@@ -26,6 +26,15 @@ pipeline {
         }
       }
     }
+    
+    stage('Build image') {
+      steps {
+        script {
+          docker.build("${registry}:latest")
+        }
+
+      }
+    }
 
   }
   environment {
