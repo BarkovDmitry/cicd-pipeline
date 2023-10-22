@@ -19,6 +19,14 @@ pipeline {
       }
     }
 
+    stage('Tests') {
+      steps {
+        dir ('scripts') {
+          sh('./test.sh')
+        }
+      }
+    }
+
   }
   environment {
     registry = 'dbarkov/ci-cd-pipeline-task'
